@@ -4,7 +4,7 @@ import images from '../assets';
 
 const Loader = () => (
     <div className="flexCenter w-full my-4">
-        <h1>Please fo connect your wallet to see</h1>
+        <h1>Please connect your wallet to see</h1>
         <Image src={images.loader} alt="loader" width={100} objectFit="contain" />
     </div>
 );
