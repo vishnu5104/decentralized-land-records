@@ -244,10 +244,11 @@ export const NFTProvider = ({ children }) => {
     // it take actual nft
     // copy first 5 lines of fetchmynfts for another method of contract
     const buyNft = async (nft) => {
-        const web3Modal = new Web3Modal();
-        const connection = await web3Modal.connect();
-        const provider = new ethers.providers.Web3Provider(connection);
-        const signer = provider.getSigner();
+        // const web3Modal = new Web3Modal();
+        // const connection = await web3Modal.connect();
+        // const provider = new ethers.providers.Web3Provider(connection);
+
+        const signer = await getArcanaProviderOrSigner(true);
 
         const contract = fetchContract(signer);
         // get our contract so then format the price of the contract to human readable
