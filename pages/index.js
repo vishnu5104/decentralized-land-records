@@ -118,93 +118,103 @@ const Home = () => {
                 ) : isLoading ? (
                     <Loader />
                 ) : (
-                    <>
-                        <div>
-                            <h1 className="font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl font-semibold ml-4 xs:ml-0">
-                                TOP BUYERS
-                            </h1>
-
-                            <div className="relative flex-1 max-w-full flex mt-3" ref={parentRef}>
-                                <div
-                                    className="flex flex-row w-max overflow-x-scroll no-scrollbar select-none"
-                                    ref={scrollRef}
-                                >
-                                    {creators.map((creator, i) => (
-                                        <CreatorCard
-                                            key={creator.seller}
-                                            rank={i + 1}
-                                            creatorImage={images[`creator${i + 1}`]}
-                                            creatorName={shortenAddress(creator.seller)}
-                                            creatorEths={creator.sumall}
-                                        />
-                                    ))}
-
-                                    {!hideButtons && (
-                                        <>
-                                            <div
-                                                onClick={() => handleScroll('left')}
-                                                className="absolute w-8 h-8 minlg:w-12 minlg:h-12 top-45 cursor-pointer left-0"
-                                            >
-                                                <Image
-                                                    src={images.left}
-                                                    layout="fill"
-                                                    objectFit="contain"
-                                                    alt="left_arrow"
-                                                    className={
-                                                        theme === 'light'
-                                                            ? 'filter invert'
-                                                            : undefined
-                                                    }
-                                                />
-                                            </div>
-                                            <div
-                                                onClick={() => handleScroll('right')}
-                                                className="absolute w-8 h-8 minlg:w-12 minlg:h-12 top-45 cursor-pointer right-0"
-                                            >
-                                                <Image
-                                                    src={images.right}
-                                                    layout="fill"
-                                                    objectFit="contain"
-                                                    alt="left_arrow"
-                                                    className={
-                                                        theme === 'light'
-                                                            ? 'filter invert'
-                                                            : undefined
-                                                    }
-                                                />
-                                            </div>
-                                        </>
-                                    )}
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="mt-10">
-                            <div className="flexBetween mx-4 xs:mx-0 minlg:mx-8 sm:flex-col sm:items-start">
-                                <h1 className="flex-1 font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl font-semibold sm:mb-4">
-                                    Select your land
+                    <div>
+                        {currentAccount ? (
+                            <div>
+                                <h1 className="font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl font-semibold ml-4 xs:ml-0">
+                                    TOP BUYERS
                                 </h1>
 
-                                <div className="flex-2 sm:w-full flex flex-row sm:flex-col">
-                                    <SearchBar
-                                        activeSelect={activeSelect}
-                                        setActiveSelect={setActiveSelect}
-                                        handleSearch={onHandleSearch}
-                                        clearSearch={onClearSearch}
-                                    />
+                                <div
+                                    className="relative flex-1 max-w-full flex mt-3"
+                                    ref={parentRef}
+                                >
+                                    <div
+                                        className="flex flex-row w-max overflow-x-scroll no-scrollbar select-none"
+                                        ref={scrollRef}
+                                    >
+                                        {creators.map((creator, i) => (
+                                            <CreatorCard
+                                                key={creator.seller}
+                                                rank={i + 1}
+                                                creatorImage={images[`creator${i + 1}`]}
+                                                creatorName={shortenAddress(creator.seller)}
+                                                creatorEths={creator.sumall}
+                                            />
+                                        ))}
+
+                                        {!hideButtons && (
+                                            <>
+                                                <div
+                                                    onClick={() => handleScroll('left')}
+                                                    className="absolute w-8 h-8 minlg:w-12 minlg:h-12 top-45 cursor-pointer left-0"
+                                                >
+                                                    <Image
+                                                        src={images.left}
+                                                        layout="fill"
+                                                        objectFit="contain"
+                                                        alt="left_arrow"
+                                                        className={
+                                                            theme === 'light'
+                                                                ? 'filter invert'
+                                                                : undefined
+                                                        }
+                                                    />
+                                                </div>
+                                                <div
+                                                    onClick={() => handleScroll('right')}
+                                                    className="absolute w-8 h-8 minlg:w-12 minlg:h-12 top-45 cursor-pointer right-0"
+                                                >
+                                                    <Image
+                                                        src={images.right}
+                                                        layout="fill"
+                                                        objectFit="contain"
+                                                        alt="left_arrow"
+                                                        className={
+                                                            theme === 'light'
+                                                                ? 'filter invert'
+                                                                : undefined
+                                                        }
+                                                    />
+                                                </div>
+                                            </>
+                                        )}
+                                    </div>
                                 </div>
                             </div>
-                            {currentAccount ? (
-                                <div className="mt-3 w-full flex flex-wrap justify-start md:justify-center">
-                                    {nfts.map((nft) => (
-                                        <NFTCard key={nft.tokenId} nft={nft} />
-                                    ))}
+                        ) : (
+                            <div>Connect your wallet to see top buyers</div>
+                        )}
+                        {currentAccount ? (
+                            <div className="mt-10">
+                                <div className="flexBetween mx-4 xs:mx-0 minlg:mx-8 sm:flex-col sm:items-start">
+                                    <h1 className="flex-1 font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl font-semibold sm:mb-4">
+                                        Select your land
+                                    </h1>
+
+                                    <div className="flex-2 sm:w-full flex flex-row sm:flex-col">
+                                        <SearchBar
+                                            activeSelect={activeSelect}
+                                            setActiveSelect={setActiveSelect}
+                                            handleSearch={onHandleSearch}
+                                            clearSearch={onClearSearch}
+                                        />
+                                    </div>
                                 </div>
-                            ) : (
-                                <div>Connect your wallet</div>
-                            )}
-                        </div>
-                    </>
+                                {currentAccount ? (
+                                    <div className="mt-3 w-full flex flex-wrap justify-start md:justify-center">
+                                        {nfts.map((nft) => (
+                                            <NFTCard key={nft.tokenId} nft={nft} />
+                                        ))}
+                                    </div>
+                                ) : (
+                                    <div>Connect your wallet to see lands</div>
+                                )}
+                            </div>
+                        ) : (
+                            <div>Connect your wallet to see lands</div>
+                        )}
+                    </div>
                 )}
             </div>
         </div>
