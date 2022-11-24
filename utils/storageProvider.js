@@ -13,6 +13,18 @@ export async function getAuthInstance() {
     return auth;
 }
 
+export async function connect() {
+    console.log('Requesting connect wallet');
+    // setRequest('connect_wallet');
+
+    try {
+        const provider = await auth.connect();
+        console.log({ provider });
+    } catch (error) {
+        console.log({ error });
+    }
+}
+
 export async function getLoggedInStatus() {
     const auth = await getAuthInstance();
     const connected = await auth.isLoggedIn();

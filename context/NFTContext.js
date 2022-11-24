@@ -1,10 +1,10 @@
 import React, { useState, useEffect, Children, setState } from 'react';
 import Web3Modal from 'web3modal';
 import { ethers } from 'ethers';
-import { AuthProvider, AppMode } from '@arcana/auth';
+import { AuthProvider } from '@arcana/auth';
 import axios from 'axios';
 
-import { getArcanaProviderOrSigner, getAuthInstance } from '../utils/storageProvider';
+import { getArcanaProviderOrSigner, getAuthInstance, connect } from '../utils/storageProvider';
 // import { getWalletInstance } from '../lib/storageProvider';
 import { create as ipfsHttpClient } from 'ipfs-http-client';
 // all the data is centralized
@@ -94,8 +94,8 @@ export const NFTProvider = ({ children }) => {
 
         // const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
         // setCurrentAccount(accounts[0]);
-
-        window.location.reload();
+        connect();
+        // window.location.reload();
     };
     const uploadToIPFS = async (file) => {
         const subdomain = 'https://nft-own-it-uplord.infura-ipfs.io';
