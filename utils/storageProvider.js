@@ -13,12 +13,20 @@ export async function getAuthInstance() {
     return auth;
 }
 
+export async function getWalletInstance() {
+    auth = new AuthProvider(process.env.NEXT_PUBLIC_REACT_APP_ARCANA_APP_ID);
+    await auth.init({ position: 'right' });
+
+    return auth.provider;
+}
+
 export async function connect() {
     console.log('Requesting connect wallet');
     // setRequest('connect_wallet');
 
     try {
         const provider = await auth.connect();
+
         console.log({ provider });
     } catch (error) {
         console.log({ error });
@@ -83,4 +91,24 @@ export default async function getStorageProvider(provider) {
     }
 
     return storageProvider;
+}
+// export function setResult(value) {
+//     let account = value;
+//     return account;
+// }
+export async function getAccounts() {
+    let from = '';
+    console.log('Requesting accounts');
+    try {
+        setRequest('eth_accounts');
+        const provider = await auth;
+        const accounts = await provider.request({ method: 'eth_accounts' });
+        console.log({ accounts });
+        from = accounts[0];
+        // setAccount(from);
+        // setResult(from);
+    } catch (e) {
+        console.log(e);
+        console.log({ e });
+    }
 }

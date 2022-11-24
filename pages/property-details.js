@@ -67,6 +67,11 @@ const AssetDetails = () => {
         price: '',
         seller: '',
     });
+
+    // console.log(typeof currentAccount.toLowerCase());
+    // console.log(typeof nft.seller.toLowerCase());
+
+    console.log('myyyy');
     const [paymentModal, setPaymentModal] = useState(false);
     const [successModal, setSuccessModal] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
@@ -149,18 +154,18 @@ const AssetDetails = () => {
                     </div>
                 </div>
                 <div className="flex flex-row sm:flex-col mt-10">
-                    {currentAccount === nft.seller.toLowerCase() ? (
+                    {currentAccount.toLowerCase() === nft.seller.toLowerCase() ? (
                         <p className="font-poppins dark:text-white text-nft-black-1 font-normal text-base border border-gray p-2">
                             You cannot buy your own land
                         </p>
-                    ) : currentAccount === nft.owner.toLowerCase() ? (
+                    ) : currentAccount.toLowerCase() === nft.owner.toLowerCase() ? (
                         <Button
                             btnName="Transfer The Ownership"
                             btnType="primary"
                             classStyles="mr-5 sm:mr-0 sm:mb-5 rounded-xl"
                             handleClick={() =>
                                 router.push(
-                                    `/resell-nft?id=${nft.tokenId}&tokenURI=${nft.tokenURI}`
+                                    `/resell-property?id=${nft.tokenId}&tokenURI=${nft.tokenURI}`
                                 )
                             }
                         />
@@ -242,7 +247,7 @@ const AssetDetails = () => {
                                 btnName="Check it out"
                                 btnType="primary"
                                 classStyles="sm:mr-0 sm:mb-5 rounded-xl"
-                                handleClick={() => router.push('/my-nfts')}
+                                handleClick={() => router.push('/my-property')}
                             />
                         </div>
                     }

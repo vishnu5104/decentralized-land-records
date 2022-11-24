@@ -1,10 +1,11 @@
 import React from 'react';
 
 import { HelloWorld } from '../components/HelloWorld';
-import getStorageProvider, { getWalletInstance } from '../lib/storageProvider';
+
 import { useState } from 'react';
 // import './App.css';
 import { Loader } from '../components';
+import getStorageProvider, { getWalletInstance } from '../utils/storageProvider';
 
 class App extends React.Component {
     state = {

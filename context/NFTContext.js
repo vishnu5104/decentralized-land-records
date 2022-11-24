@@ -24,7 +24,7 @@ const client = ipfsHttpClient({
         authorization: auth,
     },
 });
-
+let useracc;
 const fetchContract = (signerOrProvider) =>
     new ethers.Contract(MarketAddress, MarketAddressABI, signerOrProvider);
 
@@ -34,7 +34,6 @@ export const NFTProvider = ({ children }) => {
     const [currentAccount, setCurrentAccount] = useState('');
 
     const nftCurrency = 'ETH';
-    let useracc;
 
     const checkIfWalletISConnected = async () => {
         let address = '';
@@ -63,22 +62,19 @@ export const NFTProvider = ({ children }) => {
             console.log('kkl');
             if (accounts.length) {
                 setCurrentAccount(from);
-                useracc = from;
-                console.log(useracc);
-                console.log(from);
             } else {
                 console.log('No accounts found');
             }
         }
         console.log('cac');
-        console.log(useracc);
 
-        // const accounts = await provider.requestUserInfo({
-        //     method: 'eth_accounts',
-        // });
-        // address = { accounts }.accounts.address;
-        // console.log({ accounts });
-        // console.log('heyy');
+        const accou = await provider.requestUserInfo({
+            method: 'eth_accounts',
+        });
+        useracc = { accou }.accou.address;
+        console.log(useracc);
+        // console.log({ accou }.accou.address);
+        console.log('heyy');
         // console.log(address);
 
         // if(cc ==1){
@@ -265,6 +261,7 @@ export const NFTProvider = ({ children }) => {
 
                 connectWallet,
                 currentAccount,
+                useracc,
                 uploadToIPFS,
                 createNFT,
                 fetchNFTs,

@@ -14,7 +14,7 @@ const MenuItems = ({ isMobile, active, setActive, setIsOpen }) => {
             case 0:
                 return '/';
             case 1:
-                return '/my-nfts';
+                return '/my-property';
             case 2:
                 return '/did-gen';
             default:
@@ -61,7 +61,7 @@ const ButtonGroup = ({ setActive, router }) => {
                 classStyles="mx-2 rounded-xl"
                 handleClick={() => {
                     setActive('');
-                    router.push('/create-nft');
+                    router.push('/create-property');
                 }}
             />
         </div>
@@ -81,10 +81,10 @@ const checkActive = (active, setActive, router) => {
             if (active !== 'Explore property listed') setActive('Explore property listed');
             break;
 
-        case '/my-nfts':
+        case '/my-property':
             if (active !== 'My Property') setActive('My Property');
             break;
-        case '/create-nft':
+        case '/create-property':
             if (active !== '') setActive('');
             break;
         case '/did-gen':
