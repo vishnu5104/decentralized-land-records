@@ -68,13 +68,13 @@ export const NFTProvider = ({ children }) => {
         }
         console.log('cac');
 
-        const accou = await provider.requestUserInfo({
-            method: 'eth_accounts',
-        });
-        useracc = { accou }.accou.address;
-        console.log(useracc);
+        // const accou = await provider.requestUserInfo({
+        //     method: 'eth_accounts',
+        // });
+        // useracc = { accou }.accou.address;
+        // console.log(useracc);
         // console.log({ accou }.accou.address);
-        console.log('heyy');
+        // console.log('heyy');
         // console.log(address);
 
         // if(cc ==1){

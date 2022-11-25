@@ -66,11 +66,11 @@ export class UploadFile extends React.Component {
                                 type="submit"
                                 className="rounded-md nft-gradient text-sm minlg:text-lg py-2 px-6 minlg:py-4 minlg:px-8 font-poppins font-semibold text-white"
                             >
-                                Submit documents
+                                Submit PSD
                             </button>
                             <br></br>
                             <label class="sty" htmlFor="upload-file-input">
-                                Property sale deed
+                                Power of attorney
                             </label>
 
                             <input
@@ -82,11 +82,11 @@ export class UploadFile extends React.Component {
                                 type="submit"
                                 className="rounded-md nft-gradient text-sm minlg:text-lg py-2 px-6 minlg:py-4 minlg:px-8 font-poppins font-semibold text-white"
                             >
-                                Submit documents
+                                Submit POA
                             </button>
                             <br></br>
                             <label class="sty" htmlFor="upload-file-input">
-                                Property sale deed
+                                Government id
                             </label>
 
                             <input
@@ -98,7 +98,7 @@ export class UploadFile extends React.Component {
                                 type="submit"
                                 className="rounded-md nft-gradient text-sm minlg:text-lg py-2 px-6 minlg:py-4 minlg:px-8 font-poppins font-semibold text-white"
                             >
-                                Submit documents
+                                Submit G-ID
                             </button>
                         </form>
                     </div>
