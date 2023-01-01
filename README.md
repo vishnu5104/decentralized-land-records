@@ -4,7 +4,7 @@
 
 ## About this project
 
-I got a better understanding on how the NFT works, How the NFT are unique and How the blockchain system itself is working. After learning these practical skills from this project i build some features to it. Also i learned how the smart-contract are works when it is deployed to internet.I learned many Front-end best practice from this project also
+I got a better understanding on how the blockchain works, How the blockchain system itself is working. After learning these practical skills from this project i build some features to it. Also i learned how the smart-contract are works when it is deployed to internet.I learned many Front-end best practice from this project also
 
 ## Objective of this project
 
