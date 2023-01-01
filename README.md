@@ -2,33 +2,31 @@
 
 # DECENTRALIZED LAND PROPERTY OWNERSHIP TRANSFER
 
-## About this project
+## About this project 
 
-I got a better understanding on how the blockchain works, How the blockchain system itself is working. After learning these practical skills from this project i build some features to it. Also i learned how the smart-contract are works when it is deployed to internet.I learned many Front-end best practice from this project also
+Through this project, I gained a better understanding of how the blockchain works and how the blockchain system functions. I also learned practical skills such as how to build features for the blockchain and how smart contracts work when they are deployed to the internet. In addition, I learned about front-end best practices.
 
-## Objective of this project
+## Objective of this project:
 
-It solve a real-world issue. We all know that our current process of land is of a way on centralized system also this has too many disadvantage by this i solved those isses by making the land as a NFT based decentralization so anyone can buy the land and sell the land too others.
+The objective of this project was to solve a real-world issue in the field of real estate. The current process of transferring land ownership is centralized and has many disadvantages. My solution was to make land ownership transferable through the use of non-fungible tokens (NFTs), which are decentralized. This allows anyone to buy and sell land securely.
 
-Also the real-estate scams are also be avoided because even the land owners get the details of there land so by that they know who worth is there land
+Additionally, this solution helps to prevent real estate scams because land owners can easily access and verify the details of their land. This allows them to accurately determine the worth of their land.
 
-## How it work
+## How it works
+1) Log in with Arcana Auth to make transactions.
+2) Land owners need to post their land data.
+3) Users can browse and buy the available properties.
+4) After purchasing the land, the ownership is transferred to the new owner.
+5) The new owner can resell the land if they wish to.
 
-#### Log in with the Metamask to make the transactions
-#### Land owners need to Post there land as NFT 
-#### Users need to buy those NFT
-#### After buying the land NFT the land ownership is changed to that particular user
-#### Also the new owner can resell there land if they get large profit 
+## Technologies used:
 
-
-## Technology Used
-
-#### Ethereum Blockchain 
-#### Next.js 
-#### Tailwind css is used for style
-#### Solidity language is used to make the smart contract 
-#### Hardhat to test and compile smart contract 
-#### Deployed to vercel 
+Ethereum Blockchain
+Next.js
+Tailwind CSS for styling
+Solidity language for creating smart contracts
+Hardhat for testing and compiling smart contracts
+Deployed to Vercel 
 
 
-# [Live Link]()
+# [Live Link](http://decentralized-land-records.vercel.app/)
