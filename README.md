@@ -21,12 +21,12 @@ Additionally, this solution helps to prevent real estate scams because land owne
 
 ## Technologies used:
 
-Ethereum Blockchain
-Next.js
-Tailwind CSS for styling
-Solidity language for creating smart contracts
-Hardhat for testing and compiling smart contracts
-Deployed to Vercel 
+-> Ethereum Blockchain
+-> Next.js for front end development 
+-> Tailwind CSS for styling
+-> Solidity language for creating smart contracts
+-> Hardhat for testing and compiling smart contracts
+-> Deployed to Vercel 
 
 
 # [Live Link](http://decentralized-land-records.vercel.app/)
