@@ -22,6 +22,7 @@ Additionally, this solution helps to prevent real estate scams because land owne
 ## Technologies used:
 
 -> Ethereum Blockchain
+
 -> Next.js for front end development 
 -> Tailwind CSS for styling
 -> Solidity language for creating smart contracts
