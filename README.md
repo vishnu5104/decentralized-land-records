@@ -4,7 +4,7 @@
 
 ## About this project 
 
-Through this project, I gained a better understanding of how the blockchain works and how the blockchain system functions. I also learned practical skills such as how to build features for the blockchain and how smart contracts work when they are deployed to the internet. In addition, I learned about front-end best practices.
+This project aims to solve a real-world problem by allowing land owners to create digital ownership records for their land and allowing users to purchase and verify these documents. Land owners can also submit private NFTs to restrict the visibility of ownership and privately upload their identity. Through this project, I gained a better understanding of how the blockchain works and how the blockchain system functions. I also learned practical skills such as how to build features for the blockchain and how smart contracts work when they are deployed to the internet. In addition, I learned about front-end best practices.
 
 ## Objective of this project:
 
